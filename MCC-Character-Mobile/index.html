@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10233d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MCC Character">
+  <meta name="description" content="Explore twelve character archetypes and the strengths you can practise.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>MCC Character</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span><span>MCC <strong>CHARACTER</strong></span></div>
+      <span class="topbar-end">12 ARCHETYPES</span>
+    </header>
+
+    <main id="gallery-view">
+      <div class="intro">
+        <p class="eyebrow">THE CHARACTER COLLECTION</p>
+        <h1>Who will you<br><em>become?</em></h1>
+        <p>Explore the strengths you already have and the skills you can build.</p>
+      </div>
+      <section class="gallery-section" aria-labelledby="gallery-title">
+        <div class="section-head"><h2 id="gallery-title">Choose a character</h2><span>01 / 12</span></div>
+        <div class="grid" id="character-grid"></div>
+      </section>
+      <p class="footnote">These are ways to grow, not boxes you have to fit into. You can draw on every character.</p>
+    </main>
+
+    <main id="detail-view" hidden>
+      <button class="back-button" id="back-button" type="button"><span aria-hidden="true">←</span> All characters</button>
+      <section class="profile" aria-live="polite">
+        <div class="portrait" id="detail-portrait" role="img"></div>
+        <div class="profile-body">
+          <div class="profile-overline"><span id="detail-number"></span><span class="divider"></span><span>CHARACTER PROFILE</span></div>
+          <h1 id="detail-title"></h1>
+          <p class="profile-lead" id="detail-lead"></p>
+          <div class="profile-panels">
+            <div class="profile-panel"><h2>Core strengths</h2><div class="chips" id="detail-strengths"></div></div>
+            <div class="profile-panel"><h2>Skills to practise</h2><ul class="skills" id="detail-skills"></ul></div>
+            <div class="profile-panel practice-panel"><h2>Try this today</h2><p id="detail-action"></p></div>
+          </div>
+        </div>
+      </section>
+      <nav class="profile-nav" aria-label="Character navigation">
+        <button id="previous-button" type="button" aria-label="Previous character">← <span>Previous</span></button>
+        <span id="nav-count"></span>
+        <button id="next-button" type="button"><span>Next</span> →</button>
+      </nav>
+    </main>
+  </div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
